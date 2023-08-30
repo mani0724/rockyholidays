@@ -1,0 +1,149 @@
+/* -------------------------- Taxi Start ---------------------------------- */
+.taxi-area2 {
+    position: relative;
+    overflow: hidden;
+
+    @media(max-width: 1399px) {
+        padding: 120px 0;
+    }
+
+    @include md {
+        padding: 80px 0;
+    }
+}
+
+.taxi-tabs-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+
+    @include sm {
+        display: block;
+    }
+}
+
+.taxi-list {
+    &_wrapper {
+        display: flex;
+        justify-content: flex-start;
+        gap: 30px;
+
+        @include vxs {
+            display: block;
+        }
+    }
+
+    .taxi-title {
+        color: $title-color;
+        font-weight: 500;
+        margin-bottom: 18px;
+    }
+
+    .checklist {
+        li {
+            margin-bottom: 5px;
+            margin-top: -0.2rem;
+        }
+    }
+
+    .th-btn {
+        font-size: 14px;
+        padding: 14px 23px;
+        margin-top: 14px;
+    }
+}
+
+.taxi-img {
+
+    img {
+        max-height: 162px;
+        border-radius: 10px;
+
+        @include vxs {
+            max-width: 100%;
+            max-height: 100%; 
+        }
+    }
+}
+
+.nav-tabs {
+    border-bottom: 1px solid transparent;
+
+    &.taxi-tabs-tabs {
+        max-width: 200px;
+        gap: 30px;
+
+        @include sm {
+            max-width: 100%;
+            gap: 20px;
+        }
+
+        @include xs {
+            gap: 10px;
+        }
+
+        @include vxs {
+            gap: 5px;
+            justify-content: flex-start;
+        }
+
+        .nav-link {
+            background-color: $white-color;
+            border: 1px solid #E7E7E7;
+            box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.04);
+            border-radius: 10px;
+            padding: 20px 40px;
+            min-width: 200px;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 28px;
+            margin-bottom: 0;
+            transition: all 0.4s ease-in-out;
+
+            @include sm {
+                padding: 14px 20px;
+                min-width: 150px;
+                margin-bottom: 20px;
+            }
+
+            @include xs {
+                padding: 10px 16px;
+                font-size: 16px;
+                line-height: 26px;
+                min-width: 120px;
+            }
+
+            @include vxs {
+                padding: 7px 10px;
+                font-size: 12px;
+                line-height: 24px;
+                min-width: 90px;
+            }
+
+            &:hover,
+            &.active,
+            &:focus {
+                border-color: $theme-color;
+                background-color: $theme-color;
+                color: $title-color; 
+            }
+        }
+    }
+}
+
+.taxi-image {
+    margin-right: -50%;
+    padding-left: 40px;
+    width: 915px;
+
+    @media(max-width: 1399px) {
+        width: 100%;
+    }
+
+    @include lg {
+        margin-top: 40px;
+    }
+}
+
+/* -------------------------- Taxi End ---------------------------------- */

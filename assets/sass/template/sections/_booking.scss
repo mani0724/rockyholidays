@@ -1,0 +1,284 @@
+/* Booking 1 ---------------------------------- */
+.booking-sec {
+    margin-top: -55px;
+    position: relative;
+    z-index: 3;
+    &:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: $smoke-color;
+        position: absolute;
+        top: 55px;
+        left: 0;
+        right: 0;
+        z-index: -1;
+    }
+}
+.booking-form {
+    .th-btn {
+        width: 100%;
+    }
+    .row {
+        --bs-gutter-x: 20px;
+    }
+    .input-wrap {
+        background-color: $white-color;
+        padding: 40px 40px 20px 40px;
+        box-shadow: 0px 12px 25px rgba(1, 19, 60, 0.02);
+    }
+}
+
+.booking-select-class {
+    display: flex;
+    .class-name {
+        &:last-child {
+            input[type="radio"] {
+                ~ label {
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    input[type="radio"] {
+        ~ label {
+            background-color: $title-color;
+            color: $white-color;
+            font-weight: 500;
+            text-transform: uppercase;
+            z-index: 2;
+            padding: 19.5px 20px 19.5px 44px;
+            margin-top: 0;
+            transition: 0.3s ease-in-out;
+            &::before {
+                top: 19px;
+                left: 20px;
+                border-radius: 0;
+                border: none;
+                height: 16px;
+                width: 16px;
+                background-color: $white-color;
+                border-radius: 99px;
+                line-height: 1.8;
+                z-index: -1;
+                transition: 0.4s ease;  
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+                background-color: #313131;
+                height: 28px;
+                width: 1px;
+                transition: 0.4s ease;  
+            }
+        }
+
+        &:checked {
+            ~ label {
+                color: $theme-color;
+                &:before {
+                    color: $theme-color;
+                }
+            }
+        }
+    }
+}
+
+@include md {
+    .booking-form {
+        .input-wrap {
+            box-shadow: 0px 12px 25px rgba(1, 19, 60, 0.06);
+        }
+    }
+    .booking-select-class input[type="radio"] ~ label {
+        padding: 19.5px 11px 19.5px 33px;
+        &:before {
+            left: 11px;
+        }
+    }
+}
+
+@include sm {
+    .booking-sec {
+        margin-top: 0;
+        padding-top: $space-mobile;
+        &:before {
+            top: 0;
+        }
+    }
+    .booking-select-class {
+        flex-wrap: wrap;
+        input[type="radio"] ~ label {
+            padding: 20.5px 11px 20.5px 33px;
+            font-size: 14px;
+            &:before {
+                top: 18px;
+                font-size: 0.65em;
+            }
+        }
+    }
+}
+
+@include xs {
+    .booking-form .input-wrap {
+        padding: 40px 20px 40px 20px;
+    }
+}
+
+/* Booking 2 ---------------------------------- */
+.booking-form.style2 {
+    display: flex;
+    gap: 40px;
+    .row {
+        --bs-gutter-x: 20px;
+    }
+    .input-box {
+        margin-bottom: -20px;
+    }
+    select, 
+    .form-control, 
+    .form-select, 
+    textarea, 
+    input {
+        height: 60px;
+        padding-right: 25px;
+    }
+    .th-btn {
+        height: 60px;
+        padding: 19.5px 15px;
+    }
+    .booking-select-class {
+        padding: 25px 0;
+        background-color: $title-color;
+        flex-direction: column;
+        align-items: stretch;
+        input[type="radio"] {
+            ~ label {
+                display: block;
+                padding: 13px 33px 13px 44px;
+                background-color: transparent;
+                &:before {
+                    top: 13px;
+                    left: 20px;
+                }
+                &::after {
+                    display: none;
+                }
+            }
+            &:checked {
+                ~ label {
+                    color: $theme-color;
+                }
+            }
+        }
+    }
+}
+
+.car-img1 {
+    margin-top: -86px;
+    img {
+        padding-left: 30px;
+        max-width: max-content;
+    }
+}
+
+@include ml {
+    .car-img1 {
+        img {
+            padding-left: 0px;
+        }
+    }
+}
+
+@include lg {
+    .car-img1 {
+        margin-top: 0;
+        margin-bottom: 20px;
+        text-align: center;
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
+@include sm {
+    .booking-form.style2 {
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 5px;
+        .booking-select-class {
+            flex-direction: row;
+            padding: 15px 5px;
+            margin-bottom: 15px;
+            input[type="radio"] ~ label {
+                padding: 13px 10px 13px 33px;
+                &:before {
+                    top: 12px;
+                    left: 10px;
+                }
+            }
+        }
+        .input-box {
+            margin-bottom: 0;
+        }
+    }
+}
+
+/* Booking 3 ---------------------------------- */
+.booking-form3 {
+    background-color: $smoke-color;
+    padding: 50px;
+    margin-left: 15px;
+    .row {
+        --bs-gutter-x: 20px;
+    }
+    .th-btn {
+        width: 100%;
+    }
+    select, 
+    .form-control, 
+    .form-select, 
+    textarea, 
+    input {
+        height: 60px;
+        border: 1px solid #ececec;
+    }
+}
+
+@include lg {
+    .booking-form3 {
+        padding: 50px 30px;
+        margin-left: 0;
+    }
+}
+
+@include vxs {
+    .booking-form3 {
+        padding: 40px 20px;
+    }
+}
+
+/* Booking 4 ---------------------------------- */
+.booking-form4 {
+    padding: 60px;
+    background-color: $white-color;
+    border: 1px solid $border-color;
+    box-shadow: 0px 13px 25px rgba(0, 0, 0, 0.05);
+    .row {
+        --bs-gutter-x: 20px;
+    }
+    .th-btn {
+        width: 100%;
+    }
+}
+
+@include md {
+    .booking-form4 {
+        padding: 40px 20px;
+    }
+}

@@ -1,0 +1,143 @@
+/* -------------------------- Service Start ---------------------------------- */
+.service-card {
+    &.style2 {
+        border-radius: 0px 0px 50px 0px;
+        border: 1px solid #F2F2F2;
+        background: $white-color;
+        box-shadow: 0px 13px 15px 0px rgba(0, 0, 0, 0.05);
+
+        &:after {
+            display: none;
+        }
+
+        .service-card {
+            &_overlay {
+                position: absolute;
+                content: "";
+                inset: 0;
+                border-radius: 0px 0px 50px 0px;
+            }
+
+            &_icon {
+                width: 70px;
+                height: 70px;
+                line-height: 70px;
+                border-radius: 0px 0px 20px 0px;
+            }
+
+            &_wrapper {
+                display: flex;
+                justify-content: flex-start;
+                gap: 25px;
+
+                @include md {
+                    gap: 15px;
+                }
+            }
+
+            &_text { 
+                margin-bottom: 28px;
+            }
+        }
+
+        .th-btn {
+            border-radius: 0px 0px 20px 0px;
+        }
+    }
+
+    &.style3 {
+        border: 1px solid #F2F2F2;
+        background: $white-color;
+        box-shadow: 0px 13px 15px 0px rgba(0, 0, 0, 0.05);
+
+        &:after {
+            display: none;
+        }
+
+        .service-card {
+            &_overlay {
+                position: absolute;
+                content: "";
+                inset: 0;
+            }
+
+            &_icon {
+                width: 70px;
+                height: 70px;
+                line-height: 70px;
+            }
+
+            &_wrapper {
+                display: flex;
+                justify-content: flex-start;
+                gap: 25px;
+
+                @include md {
+                    gap: 15px;
+                }
+            }
+
+            &_text {
+                margin-bottom: 28px;
+            }
+        }
+    }
+}
+
+.service-taxi-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    gap: 40px;
+
+    @include lg {
+        display: block;
+    }
+
+    .service-taxi-image {
+        img {
+            width: 100%;
+
+            @include lg {
+                margin-bottom: 30px; 
+            }
+        }
+    }
+}
+
+.service-taxi-content {
+    .taxi-about {
+        max-width: 530px;
+    }
+
+    .taxi-feature-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 7px 20px;
+        margin-bottom: 40px;
+        @include xs {
+            grid-template-columns: repeat(1, 1fr);  
+        }
+    }
+
+    .taxi-about {
+        &_rate {
+            font-size: 18px;
+        }
+
+        &_title {
+            margin-bottom: 10px;
+        }
+
+        &_text {
+            margin-bottom: 25px;
+        }
+    }
+}
+
+.service-area {
+    .slick-arrow {
+        border-radius: 0px 0px 20px 0px;
+    }
+}
+
+/* -------------------------- Service End ---------------------------------- */

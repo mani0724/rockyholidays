@@ -1,0 +1,52 @@
+.img-box4 {
+    position: relative;
+    &.style2 {
+        .img2 {
+            margin-top: -46%;
+        }
+    }
+    .th-experience {
+        position: absolute;
+        top: 25px;
+        right: 15px;
+        z-index: 2;
+        background-color: $white-color;
+        max-width: 120px;
+    }
+}
+
+.about-feature {
+    &-wrap {
+        margin-bottom: 45px;
+    }
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    &:not(:last-of-type) {
+        margin-bottom: 25px;
+    }
+    &_icon {
+        @include equal-size-lineHeight(80px);
+        background-color: $theme-color;
+        text-align: center;
+    }
+    &_title {
+        font-size: 20px;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+    }
+    &_text {
+        margin-bottom: 0;
+        max-width: 430px;
+    }
+}
+
+@include vxs {
+    .about-feature {
+        flex-direction: column;
+        align-items: flex-start;
+        &-wrap {
+            margin-bottom: 35px;
+        }
+    }
+}

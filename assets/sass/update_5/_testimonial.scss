@@ -1,0 +1,143 @@
+/* -------------------------- Testimonial Start ---------------------------------- */
+.testi-box-area {
+    border-radius: 0px 0px 100px 0px;
+    background: $white-color;
+    box-shadow: 0px 13px 30px 0px rgba(0, 0, 0, 0.03);
+    position: relative;
+    padding: 60px;
+    display: flex;
+    align-items: center;
+    background-position: right center;
+    background-repeat: no-repeat;
+    gap: 60px;
+    margin-top: 120px;
+    z-index: 2;
+
+    @include md {
+        margin-top: 80px;
+        padding: 25px;
+    }
+
+    @include lg {
+        display: block;
+        padding: 120px 40px;
+    }
+
+    @include md {
+        padding: 80px 40px;
+    }
+
+    @include xs {
+        padding: 80px 20px; 
+        border-radius: 0px 0px 30px 0px;
+    }
+
+
+    &:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(90deg, rgba(247, 244, 237, 0.00) 48.96%, #545D7E 100%);
+        border-radius: 0px 0px 100px 0px;
+        z-index: -1;
+
+        @include xs {
+            border-radius: 0px 0px 30px 0px;
+        }
+    }
+
+    .testi-box-img {
+        margin: 0 -60px 0 20px;
+
+        @include lg {
+            display: none;
+        }
+    }
+}
+
+.testi-box-slide {
+    width: 100%;
+    max-width: 558px;
+    position: relative;
+
+    @include lg {
+        max-width: 100%;
+    }
+    .title-area {  
+        margin-top: -1.70em;
+    }
+
+    .testi-box {
+        background-color: $smoke-color;
+        padding: 40px;
+        display: block;
+        border-radius: 0px 0px 50px 0px;
+
+        @include md {
+            padding: 20px;
+        }
+
+        .testi-star {
+            margin-bottom: 15px;
+
+            i {
+                font-size: 12px;
+                color: $theme-color;
+            }
+        }
+
+        &_text {
+            font-size: 18px;
+            line-height: 30px;
+        }
+
+        &_wrapper {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &_profile {
+            display: flex;
+            justify-content: flex-start;
+            gap: 15px;
+        }
+
+        &_avater {
+            border-radius: 10px;
+
+            img {
+                border-radius: 10px;
+            }
+        }
+
+        &_quote {
+            position: absolute;
+            right: 40px;
+            bottom: 50px;
+
+            @include xs {
+                right: 20px;
+            }
+        }
+
+        &_name {
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 28px;
+            margin-bottom: 0px;
+
+            @include xs {
+                font-size: 14px;
+                line-height: 26px;
+            }
+        }
+
+        &_desig {
+            color: $theme-color;
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
+}
+
+/* -------------------------- Testimonial End ---------------------------------- */

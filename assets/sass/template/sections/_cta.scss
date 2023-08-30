@@ -1,0 +1,53 @@
+/* Cta ---------------------------------- */
+.cta-wrap {
+    position: relative;
+    z-index: 2;
+}
+.cta-bg-shape {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 65%;
+    z-index: 3;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+@include xl {
+    .cta-bg-shape {
+        max-width: 55%;
+    }
+}
+@include md {
+    .cta-bg-shape {
+        max-width: 50%;
+    }
+}
+
+@include sm {
+    .cta-bg-shape {
+        max-width: 45%;
+    }
+}
+
+@include xs {
+    .cta-wrap {
+        text-align: center;
+        .info-card {
+            justify-content: center;
+        }
+    }
+    .cta-bg-shape {
+        max-width: 100%;
+        position: relative;
+        top: -80px;
+        left: 0;
+        margin-bottom: -35px;
+        img {
+            height: 250px;
+        }
+    }
+}

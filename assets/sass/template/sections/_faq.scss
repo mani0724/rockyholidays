@@ -1,0 +1,110 @@
+/* Faq 1 ---------------------------------- */
+.accordion-card {
+    margin-bottom: 20px;
+    transition: 0.4s ease-in-out;
+
+    .accordion-button {
+        font-size: 18px;
+        font-weight: bold;
+        font-family: $title-font;
+        border: 0;
+        color: $title-color;
+        background-color: $smoke-color;
+        padding: 17px 70px 17px 25px;
+        min-height: 60px;
+        gap: 10px;
+        margin-bottom: 0;
+        text-align: left;
+        transition: 0.3s;
+        position: relative;
+
+        &:after {
+            content: "\f063";
+            @include equal-size(60px);
+            height: 100%;
+            line-height: 1;
+            background-color: $theme-color;
+            background-image: none;
+            font-family: $icon-font;
+            color: $title-color;
+            font-weight: 900;
+            font-size: 0.9em;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+        &:not(.collapsed) {
+            color: $theme-color;
+
+            // background-color: $smoke-color;
+            // padding: 17px 70px 17px 25px;
+            &:after {
+                content: "\f062";
+                transform: rotate(0deg);
+            }
+        }
+    }
+
+    .accordion-collapse {
+        border: none;
+    }
+
+    .accordion-body {
+        padding: 30px 0 20px 0;
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: center;
+        gap: 15px 30px;
+    }
+
+    .faq-text {
+        margin-bottom: 0;
+    }
+
+    .faq-img {
+        height: 100%;
+
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+
+        .accordion-body {
+            padding-bottom: 0;
+        }
+    }
+}
+
+@include sm {
+    .accordion-card {
+        .accordion-body {
+            grid-template-columns: 100%;
+        }
+
+        .faq-img {
+            img {
+                width: 100%;
+                max-width: 300px;
+                height: 180px;
+            }
+        }
+
+        .faq-text {
+            margin-bottom: -0.56em;
+        }
+    }
+}

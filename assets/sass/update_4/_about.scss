@@ -1,0 +1,118 @@
+/* ----------------------- About Start ---------------------------------- */
+.img-box8 {
+    position: relative;
+
+    .img1 {
+        width: 545px;
+        height: 571px;
+        border-radius: 20px;
+        border: 1.5px dashed $theme-color;
+        padding: 10px;
+
+        @include lg {
+            width: 100%;
+            height: 100%;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            max-height: 800px;  
+            border-radius: 20px;
+        }
+    }
+
+    .year-counter {
+        background-color: $theme-color;
+        border: 6px solid $white-color;
+        display: flex;
+        gap: 10px;
+        padding: 30px;
+        border-radius: 50px;
+        transform: rotate(-90deg);
+        position: absolute;
+        left: -25%;
+        top: 40%;
+
+        @include lg {
+            left: -10%;
+        }
+        @include md {
+            left: -20%; 
+        }
+        @include xs {
+            left: -10%;  
+        }
+        @include vxs {
+           display: none;
+        }  
+
+        &_number {
+            font-family: $title-font;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 30px;
+            margin-bottom: 0;
+            color: $white-color;
+        }
+
+        &_title {
+            font-family: $title-font;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 30px;
+            color: $title-color;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.about-feature-wrap {
+    &.style2 {
+        margin-bottom: 15px;   
+
+        .about-feature {
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 15px; 
+        }
+
+        .about_title {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 34px;
+            margin-top: -0.4rem;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .about_text {
+            max-width: 491px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+        }
+
+    }
+}
+
+
+.about-call-text {
+    font-size: 24px;
+    font-family: $title-font;
+    color: $title-color;
+    font-weight: 600;
+    line-height: 34px;
+    transition: 0.4s;
+    &:hover {
+        color: $theme-color; 
+    }
+
+    .about-call-btn {
+        font-size: 16px; 
+        margin-right: 25px;  
+    }
+}
+
+/* ----------------------- About End ---------------------------------- */

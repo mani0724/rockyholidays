@@ -1,0 +1,230 @@
+/* Process 1 ---------------------------------- */
+.process-card {
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        gap: 50px 20px;
+        position: relative;
+    }
+    max-width: 300px;
+    text-align: center;
+
+    &_icon {
+        .shape {
+            background-color: $white-color;
+        }
+        i {
+            color: $theme-color;
+        }
+    }
+    &_num {
+        color: $title-color;
+        background-color: $theme-color;
+        font-size: 18px;
+        font-weight: bold;
+        display: inline-block;
+        @include equal-size(50px);
+        line-height: 40px;
+        border: 5px solid $white-color;
+        position: absolute;
+        right: 0;
+        top: 0;
+        border-radius: 50%;
+    }
+    &_title {
+        color: $white-color;
+        font-size: 22px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        margin-top: -0.3em;
+        transition: 0.4s ease-in-out;
+    }
+    &_text {
+        color: $light-color;
+        margin-bottom: -0.5em;
+    }
+    &:hover {
+        .process-card {
+            &_icon {
+                i {
+                    transform: rotateY(180deg);
+                }
+            }
+        }
+    }
+}
+.process-line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 760px;
+    img {
+        width: 100%;
+    }
+}
+
+@include md {
+    .process-card {
+        &-wrap {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+    .process-line {
+        display: none;
+    }
+}
+
+@include sm {
+    .process-card {
+        max-width: 500px;
+    }
+}
+
+@include xs {
+    .process-card {
+        max-width: 300px;
+    }
+}
+
+/* Process 1 ---------------------------------- */
+.process-box {
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px 20px;
+        position: relative;
+    }
+    max-width: 300px;
+    text-align: center;
+    position: relative;
+    &_icon {
+        position: relative;
+        @include equal-size-lineHeight(var(--icon-size, 130px));
+        border-radius: 50%;
+        margin: 0 auto 30px auto;
+        text-align: center;
+        background-color: $white-color;
+        border: 1px solid #e4e4e4;
+        i {
+            line-height: var(--icon-size, 130px);
+            font-size: 50px;
+            color: $title-color;
+        }
+        &:after {
+            content: "";
+            width: 180px;
+            height: 1px;
+            background-color: #e4e4e4;
+            position: absolute;
+            top: 75%;
+            left: 97%;
+            transform: rotate(19deg);
+        }
+    }
+    &_num {
+        color: $white-color;
+        background-color: $theme-color;
+        font-size: 48px;
+        font-weight: bold;
+        display: inline-block;
+        @include equal-size(100%);
+        line-height: var(--icon-size, 130px);
+        position: absolute;
+        left: 0;
+        top: 0;
+        border-radius: 50%;
+        transform: scaleX(0);
+        transition: 0.4s ease-in-out;
+    }
+    &_title {
+        font-size: 22px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        margin-top: -0.3em;
+        transition: 0.4s ease-in-out;
+    }
+    &_text {
+        margin-bottom: -0.5em;
+    }
+    &.style2 {
+        margin-top: 60px;
+        .process-box {
+            &_icon {
+                &:after {
+                    top: 26%;
+                    transform: rotate(-19deg);
+                }
+            }
+        }
+    }
+    &:last-child {
+        .process-box {
+            &_icon {
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+    &:hover {
+        .process-box {
+            &_num {
+                transform: scaleX(1);
+            }
+        }
+    }
+}
+
+@include md {
+    .process-box {
+        &-wrap {
+            flex-wrap: wrap;
+        }
+        min-width: calc(50% - 10px);
+        &_icon {
+            &:after {
+                width: 300px;
+                transform: rotate(15deg);
+            }
+        }
+        &:nth-child(2) {
+            .process-box {
+                &_icon {
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+@include sm {
+    .process-box {
+        &-wrap {
+            gap: 40px 20px;
+        }
+        min-width: 100%;
+        &_icon {
+            margin-bottom: 25px;
+            &:after {
+                display: none;
+            }
+        }
+        &_title {
+            margin-bottom: 10px;
+        }
+        &_text {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 360px;
+        }
+        &.style2 {
+            margin-top: 0;
+        }
+    }
+}

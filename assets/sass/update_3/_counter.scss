@@ -1,0 +1,19 @@
+/* ----------------------- Counter Start ---------------------------------- */
+.counter-wrap{
+    &.style2{
+        @include lg {
+            margin-bottom: 120px; 
+        }
+        @include md {
+            margin-bottom: 80px;  
+        }
+        .counter-line {
+            top: 48%;
+            @include lg {
+                // top: 36%; 
+            }
+        }
+    }
+}
+
+/* ----------------------- Counter Start ---------------------------------- */

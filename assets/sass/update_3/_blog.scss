@@ -1,0 +1,84 @@
+/* ----------------------- Blog Start ---------------------------------- */
+.blog-item {
+    position: relative;
+    background: $white-color; 
+    padding: 30px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.08); 
+
+    &:hover {
+        .blog-img {
+            img {
+                transform: scale(1);
+            }
+        }
+    }
+
+    .blog-meta {
+        &.style2 {
+            padding-top: 30px;
+            margin-bottom: 10px;   
+            border-bottom: none; 
+
+            span,
+            a {
+                &:before {
+                    content: "";
+                    background-color: $theme-color;
+                }
+            }
+        }
+    }
+
+    .blog-img {
+        position: relative; 
+        overflow: visible;
+
+        .blog-date {
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            background-color: $white-color;
+            color: #74757B;
+            padding: 12px 16px;
+            display: block;
+            text-align: center;
+            margin: auto; 
+            position: absolute; 
+            width: 110px;  
+            bottom: -21px;    
+            left: -4px;
+            clip-path: path("M105.433 37.039C108.448 44.3185 110 52.1207 110 60H50L0 60V26.8338C2.20445 23.5104 4.74004 20.4071 7.57359 17.5736C13.1451 12.0021 19.7595 7.58251 27.039 4.56723C34.3185 1.55195 42.1207 0 50 0C57.8793 0 65.6815 1.55195 72.961 4.56723C80.2405 7.58251 86.8549 12.0021 92.4264 17.5736C97.9979 23.1451 102.417 29.7595 105.433 37.039Z");
+
+        }
+
+        .month {
+            display: block;
+            font-weight: 700;
+            font-size: 24px;
+            color: $theme-color;
+            margin: auto;
+        }
+    }
+
+    &_title {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 34px;
+        border-bottom: 1px solid #E7E7E7;
+        margin-bottom: 25px;
+        padding-bottom: 25px;
+        color: $title-color;
+        &:hover {
+            color: $theme-color; 
+        }
+        a{
+            color: inherit;
+        }
+    }
+
+    .link-btn {
+        color: $theme-color;
+    }
+}
+
+/* ----------------------- Blog End ---------------------------------- */

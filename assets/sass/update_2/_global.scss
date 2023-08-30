@@ -1,0 +1,138 @@
+.theme-red {
+    --theme-color: #e30d16;
+    .scroll-btn i {
+        color: $white-color;
+    }
+    .th-btn {
+        color: $white-color;
+    }
+    .play-btn {
+        > i {
+            color: $white-color;
+        }
+    }
+    .download-btn {
+        &:not(:hover) {
+            color: $white-color;
+        }
+    }
+    .th-menu-wrapper .th-menu-toggle ,
+    .th-mobile-menu .new-label,
+    .main-menu a .new-label {
+        color: $white-color;
+    }
+    .slick-arrow:hover {
+        color: $white-color;
+    }
+    .newsletter-form .newsletter-btn {
+        color: $white-color;
+    }
+    .th-social  a {
+        &:hover {
+            color: $white-color;
+        }
+    }
+    .taxi-grid_icon i {
+        color: $white-color;
+    }
+    .taxi-grid_img {
+        background-color: $white-color;
+    }
+}
+
+@include md {
+    .header-layout3 .top-right .row {
+        --bs-gutter-x: 24px;
+    }
+}
+
+.box-title {
+    font-size: 24px;
+    line-height: 1.417;
+    font-weight: 700;
+    margin-top: -0.32em;
+    a {
+        color: inherit;
+        &:hover {
+            color: $theme-color;
+        }
+    }
+}
+
+.slider-shadow {
+    .slick-list {
+      padding-top: 30px !important;
+      padding-bottom: 30px !important;
+      margin-bottom: -30px;
+      margin-top: -30px;
+    }
+}
+
+.tab-menu4 {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: -40px;
+    margin-bottom: 60px;
+    button {
+        font-weight: 600;
+        color: $white-color;
+        text-transform: uppercase;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        &:not(:last-child) {
+            &:after {
+                content: '';
+                height: 1px;
+                width: 40px;
+                background-color: #aaa;
+                display: inline-block;
+                margin-left: 10px;
+                position: relative;
+                top: -5px;
+            }
+        }
+        &.active {
+            color: $theme-color;
+        }
+    }
+}
+
+@include lg {
+    .tab-menu4 {
+        margin-top: -30px;
+        margin-bottom: 55px;
+    }
+}
+@include md {
+    .tab-menu4 {
+        margin-top: -20px;
+        margin-bottom: 45px;
+    }
+}
+
+@include sm {
+    .tab-menu4 {
+        gap: 8px 20px;
+        button {
+            &:not(:last-child) {
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.download-area {
+    position: relative;
+    z-index: 3;
+    padding: 60px;
+    background-color: $smoke-color;
+    background-position: left bottom;
+    @include sm {
+        padding: 50px 12px;
+    }
+}

@@ -1,0 +1,274 @@
+.sec-title {
+  margin-bottom: calc(var(--section-title-space) - 12px);
+  margin-top: -0.24em;
+  font-size: 44px;
+  text-transform: capitalize;
+  line-height: 54px;
+}
+
+.sub-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: $theme-color;
+  font-family: $title-font;
+  text-transform: uppercase;
+  margin-top: -0.41em;
+  margin-bottom: 28px;
+  display: block;
+
+  @include sm {
+    margin-bottom: 18px;
+  }
+}
+
+.shadow-title {
+  font-family: $title-font;
+  font-size: 150px;
+  font-weight: bold;
+  line-height: initial;
+  background: linear-gradient(180deg, #EDEDED 0%, transparent 84.54%);
+  background-clip: text;
+  text-fill-color: transparent;
+  color: transparent;
+  position: absolute;
+  top: 47%;
+  transform: translateY(-50%);
+  width: 100%;
+  z-index: -1;
+
+  &.dark-color {
+    background: linear-gradient(180deg, #232732 0%, transparent 84.54%);
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+}
+
+.title-area {
+  margin-bottom: calc(var(--section-title-space) - 12px);
+  position: relative;
+  z-index: 2;
+  margin-top: -0.40em;
+
+  .sub-title {
+    display: inline-block;
+    color: $theme-color;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+    font-family: $title-font;
+    position: relative;
+    margin-bottom: 25px; 
+    padding-left: 60px;
+    margin-top: -0.34em;
+    text-transform: uppercase;
+
+    @include sm {
+      margin-bottom: 18px;
+    }
+
+    @include xs {
+      padding-left: 40px;
+    }
+
+
+    .double-line:before,
+    &:before,
+    .double-line:after,
+    &:after {
+      position: absolute;
+      content: '';
+      background-color: $theme-color;
+      left: 0;
+      top: 7px;
+      height: 2px;
+      width: 50px;
+
+      @include xs {
+        width: 30px;
+      }
+    }
+
+    .double-line:after,
+    &:after {
+      margin-top: 3px;
+      width: 30px;
+      left: 20px;
+
+      @include xs {
+        width: 20px;
+        left: 10px;
+      }
+    }
+
+    .double-line:before,
+    &:before {
+      width: 50px;
+      top: auto;
+      bottom: 7px;
+
+      @include xs {
+        width: 30px;
+      }
+    }
+
+    .double-line {
+      margin-left: 0;
+
+      &:before,
+      &:after {
+        transform: translate(100%, 0);
+        right: -10px;
+        left: auto;
+      }
+    }
+
+    &.style2 {
+      padding: 0;
+      margin-top: 4px; 
+
+      &:before,
+      &:after {
+        display: none;
+      }
+
+      img {
+        margin: 0 8px 0 0;
+      }
+    }
+
+    .sub-title2 {
+      background-color: $theme-color;
+      border-radius: 5px;
+      padding: 2px 8px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 28px;
+      color: $title-color;
+    }
+  }
+
+  .sec-title {
+    margin-bottom: 15px;
+  }
+
+  &.mb-0 {
+    .sec-title {
+      margin-bottom: -0.41em;
+    }
+  }
+}
+
+.sec-btn {
+  margin-bottom: var(--section-title-space);
+}
+
+@include ml {
+  .sec-title {
+    font-size: 42px;
+  }
+
+  .shadow-title {
+    font-size: 120px;
+  }
+
+  .title-area,
+  .sec-title {
+    --section-title-space: 50px;
+  }
+}
+
+@include lg {
+  .sub-title {
+    margin-bottom: 18px;
+  }
+
+  .sec-title {
+    font-size: 38px;
+    line-height: 48px;
+  }
+
+  .shadow-title {
+    font-size: 96px;
+  }
+
+  .title-area,
+  .sec-title {
+    --section-title-space: 50px;
+
+    &.mb-40 {
+      margin-bottom: 35px;
+    }
+
+    &.mb-50 {
+      margin-bottom: 35px;
+    }
+
+    &.mb-25 {
+      margin-bottom: 20px;
+    }
+
+    &.mb-35 {
+      margin-bottom: 30px;
+    }
+
+    &.mb-30 {
+      margin-bottom: 22px;
+    }
+  }
+
+  .sec-btn {
+    --section-title-space: 65px;
+  }
+}
+
+@include md {
+  .sec-title {
+    font-size: 34px;
+    line-height: 44px;
+  }
+
+  .shadow-title {
+    font-size: 88px;
+  }
+
+  .sub-title {
+    margin-bottom: 12px;
+  }
+
+  .title-area,
+  .sec-title {
+    --section-title-space: 40px;
+
+    &.mb-50 {
+      margin-bottom: 35px;
+    }
+  }
+
+  .sec-btn {
+    --section-title-space: 50px;
+  }
+}
+
+@include sm {
+  .sec-title {
+    font-size: 26px;
+    line-height: 38px;
+  }
+
+  .shadow-title {
+    font-size: 60px;
+  }
+}
+
+@include xs {
+  .journey-wrap {
+    flex-wrap: wrap;
+  }
+}
+
+@include vxs {
+  .shadow-title {
+    font-size: 50px;
+    top: 55%;
+  }
+}

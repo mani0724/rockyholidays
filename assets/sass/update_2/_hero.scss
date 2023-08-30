@@ -1,0 +1,129 @@
+.hero-slider-6 {
+    &:after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: $title-color;
+        mix-blend-mode: soft-light;
+        opacity: 0.5;
+    }
+    .hero-img {
+        top: 35px;
+        height: auto;
+        width: auto;
+        img {
+            max-width: 100%;
+            width: auto;
+            height: auto;
+        }
+    }
+}
+
+.hero-img {
+    .shape-1,
+    .shape-2,
+    .shape-3,
+    .shape-4,
+    .shape-5,
+    .shape-6 {
+        position: absolute;
+    }
+    .shape-1 {
+        top: 47%;
+        left: 9.5%;
+        animation: jumpAni 7s linear infinite;
+    }
+    .shape-2 {
+        top: 14%;
+        left: 5%;
+        animation: jumpX 7s linear infinite;
+    }
+    .shape-3 {
+        top: 46%;
+        left: 40%;
+        animation: jumpX 7s linear infinite;
+    }
+    .shape-4 {
+        top: 0%;
+        right: 22%;
+        animation: jumpXreverse 7s linear infinite;
+    }
+    .shape-5 {
+        top: 23%;
+        left: 39%;
+        animation: mapPulse 5s linear infinite;
+        transform-origin: bottom center;
+        width: 10% !important;
+    }
+    .shape-6 {
+        top: 23%;
+        right: 13%;
+        animation: mapPulse 7s linear infinite;
+        transform-origin: bottom center;
+        width: 22% !important;
+    }
+}
+
+@keyframes jumpX {
+    0% {
+        transform: translateX(0);
+    }
+    40% {
+        transform: translateX(-60px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes jumpXreverse {
+    0% {
+        transform: translateX(0);
+    }
+    40% {
+        transform: translateX(60px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes mapPulse {
+    0% {
+        transform: scale(1, 1);
+    }
+    40% {
+        transform: scale(0.5, 0.5);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+.hero-style6 {
+    .video-btn {
+        color: $white-color;
+    }
+}
+
+@include xl {
+    .hero-slider-6 .hero-img {
+        top: 95px;
+        width: 55%;
+    }
+}
+
+@include md {
+    .hero-slider-6 .hero-img {
+        top: -40px;
+        width: 100%;
+    }
+    .hero-img {
+        .shape-1,
+        .shape-2,
+        .shape-3,
+        .shape-4 {
+            width: 13% !important;
+        }
+    }
+}

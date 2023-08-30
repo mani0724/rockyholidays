@@ -1,0 +1,109 @@
+/* -------------------------- Testimonial Start ---------------------------------- */
+.testi-item {
+    position: relative;
+    background: $white-color;
+    padding: 40px;
+    box-shadow: 0px 13px 15px rgba(0, 0, 0, 0.05); 
+
+    &:after {
+        content: '';
+        height: 2px;
+        width: 100%;
+        background-color: $title-color;
+        position: absolute;
+        bottom: -1px;
+        right: -1px;
+        z-index: 2;
+        transition: 0.4s; 
+    }
+
+    @include xl {
+        padding: 30px;
+    }
+    &_img { 
+        img {
+            border-radius: 0px; 
+        }
+    }
+
+    &_text {
+        font-weight: 400; 
+        font-size: 16px;
+        line-height: 26px;
+        margin-top: -0.3rem;  
+        margin-bottom: 30px;    
+    } 
+
+    &_profile {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 15px;
+        
+    }
+
+    &_name {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 28px;
+        text-transform: uppercase; 
+        margin-bottom: 4px;
+ 
+        @include xl {
+            font-size: 16px;
+            line-height: 26px;
+        }
+    }
+
+    &_desig {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        color: $theme-color;
+        margin-bottom: 0;
+    }
+
+    &_review {
+        background: $title-color;
+        border-radius: 25px 0px 0px 0px;
+        padding: 9px 16px;
+        color: $theme-color;
+        max-width: 130px; 
+        margin-left: auto;
+        display: block; 
+        font-size: 12px;
+        line-height: 12px; 
+        position: absolute;
+        right: -1px;  
+        bottom: 0;  
+        transition: 0.4s;
+
+        i {
+            font-size: 12px; 
+            margin-right: 3px;
+        }
+    }
+    &_quote{
+        position: absolute;
+        right: 40px;
+        bottom: 50px;
+        @include xs{
+            right: 20px; 
+        }
+    }
+
+    &:hover {
+        &:after {
+            background-color: $theme-color; 
+        }
+
+        .testi-item {
+            &_review {
+                background: $theme-color;
+                color: $white-color;
+            }
+        }
+    }
+}
+
+/* -------------------------- Testimonial End ---------------------------------- */

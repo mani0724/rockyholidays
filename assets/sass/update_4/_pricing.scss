@@ -1,0 +1,95 @@
+/* -------------------------- Pricing Start ---------------------------------- */
+.price-card {
+    &.style2 {
+        position: relative;
+        background: $white-color;
+        padding: 50px 40px 40px 40px;
+        box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
+        overflow: hidden;
+        z-index: 2;
+
+        @include xs {
+            padding: 30px !important; 
+        }
+
+        .price-taxi {
+            position: absolute;
+            right: 0px;
+            top: 8px;
+            z-index: -1;
+
+            @media(max-width: 1299px) {
+                right: -30px;
+            }
+
+            @include vxs {
+                display: none;
+            }
+
+        }
+
+        .price-card {
+            &_title {
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 30px;
+                text-transform: uppercase;
+                margin-bottom: 0px;
+            }
+
+            &_subtitle {
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 24px;
+                color: #74757B;
+                margin-bottom: 35px;
+            }
+
+            &_content {
+                .checklist {
+                    margin-bottom: 40px;
+
+                    ul {
+                        background: #F7F4ED;
+                        padding: 40px;
+                        border-radius: 10px;
+
+                        @include xl {
+                            padding: 25px;
+                        }
+
+                        li {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            color: $title-color;
+                            padding: 0;
+
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+
+                            &:before {
+                                display: none;
+                            }
+
+                            .price {
+                                color: $body-color;
+                                font-weight: 400;
+                            }
+                        }
+                    }
+                }
+
+                .th-btn {
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+}
+
+
+
+/* -------------------------- Pricing End ---------------------------------- */

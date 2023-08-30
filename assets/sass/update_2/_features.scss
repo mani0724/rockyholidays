@@ -1,0 +1,44 @@
+/* Feature grid ---------------------------------- */
+.feature-grid {
+    padding: 0 30px 30px 30px;
+    position: relative;
+    text-align: center;
+    z-index: 2;
+    &:before {
+        content: '';
+        width: 100%;
+        height: 475px;
+        background: $white-color;
+        box-shadow: 0px 4px 15px rgba(223, 225, 226, 0.41);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+    }
+    &_img {
+        img {
+            width: 100%;
+        }
+    }
+    &_icon {
+        @include equal-size-lineHeight(80px);
+        background-color: $white-color;
+        border-radius: 50%;
+        box-shadow: 0px 4px 14px rgba(1, 19, 60, 0.08);
+        margin: -40px auto 30px auto;
+        position: relative;
+        z-index: 3;
+    }
+    &_title {
+        text-transform: uppercase;
+    }
+    &_text {
+        margin-bottom: 22px;
+    }
+}
+
+@media (max-width: 360px) {
+    .feature-grid {
+        padding: 0 20px 30px 20px;
+    }
+}

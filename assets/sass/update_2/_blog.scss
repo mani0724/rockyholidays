@@ -1,0 +1,11 @@
+.blog-box .blog-title {
+    &.style2 {
+        font-size: 30px;
+        @include md {
+            font-size: 24px;
+        }
+        @media (max-width: 350px) {
+            font-size: 22px;
+        }
+    }
+}

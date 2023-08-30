@@ -1,0 +1,165 @@
+.image-scale-hover {
+  overflow: hidden;
+
+  img {
+    transition: all ease 0.4s;
+    transform: scale(1.001);
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.2);
+    }
+  }
+}
+
+.z-index-step1 {
+  position: relative;
+  z-index: 4 !important;
+}
+
+.z-index-common {
+  position: relative;
+  z-index: 3;
+}
+
+.z-index-n1 {
+  z-index: -1;
+}
+
+
+.media-body {
+  flex: 1;
+}
+
+// Update 1
+.shape-mockup-wrap {
+  position: relative;
+  z-index: 2;
+}
+
+.shape-mockup {
+  position: absolute;
+  z-index: -1;
+
+  &.z-index-3 {
+    z-index: 3;
+  }
+}
+
+.slider-shadow {
+  .slick-list {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: -30px;
+    margin-top: -30px;
+  }
+}
+
+.badge {
+  position: absolute;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: inline-block;
+  text-align: center;
+  background-color: $theme-color;
+  color: $white-color;
+  font-weight: 400;
+  font-size: 12px;
+  padding: .25em .45em;
+  border-radius: 50%;
+}
+
+.th-social {
+  a {
+    display: inline-block;
+    @include equal-size(var(--icon-size, 40px));
+    line-height: var(--icon-size, 42px);
+    background-color: $smoke-color;
+    color: $body-color;
+    font-size: 14px;
+    text-align: center;
+    margin-right: 5px;
+    border-radius: 50%;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      background-color: $theme-color;
+      color: $white-color;
+      transform: rotate(360deg);
+    }
+  }
+
+  &.style2 {
+    a {
+      background-color: transparent;
+      border: 1px solid $body-color;
+
+      &:hover {
+        background-color: $theme-color;
+        color: $title-color;
+        border-color: $theme-color;
+      }
+    }
+  }
+}
+
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+
+  &.style2 {
+    gap: 20px;
+    column-gap: 45px;
+    align-items: center;
+
+
+  }
+
+  &.style3 {
+    gap: 40px;
+    align-items: center; 
+  }
+
+  .style-skew {
+    &:first-child {
+      margin-right: 0;
+    }
+
+    &:last-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.th-video {
+  position: relative;
+
+  .play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+}
+
+
+.xdsoft_datetimepicker {
+  background-color: $white-color;
+  z-index: 5;
+}
+
+
+@include md {
+  p {
+    &.mb-35 {
+      margin-bottom: 30px;
+    }
+  }
+}

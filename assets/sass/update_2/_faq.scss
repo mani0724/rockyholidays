@@ -1,0 +1,35 @@
+/* Faq 1 ---------------------------------- */ 
+.accordion-card {
+    &.style2 {
+        .accordion-button {
+            color: $title-color;
+            background-color: $white-color;
+            min-height: 55px;
+            padding: 14px 70px 14px 25px;
+            &:after {
+                content: "\f0d7";
+                color: $white-color;
+                font-size: 20px;
+                width: 55px;
+            }
+            &:focus {
+                outline: none;
+                box-shadow: none;
+            }
+            &:not(.collapsed) {
+                color: $theme-color;
+                // background-color: $smoke-color;
+                // padding: 17px 70px 17px 25px;
+                &:after {
+                    content: "\f0d8";
+                    transform: rotate(0deg);
+                }
+            }
+        }
+        .accordion-body {
+            padding: 23px 25px 20px 25px;
+            border: 1px solid #e0e0e0;
+            border-top: none;
+        }
+    }
+}

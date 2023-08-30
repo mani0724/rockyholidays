@@ -1,0 +1,80 @@
+/* -------------------------- Process Start ---------------------------------- */
+.process-box-wrapper {
+    position: relative;
+
+    &.style2 {
+        .process-line {
+            position: absolute;
+            top: 7%;
+            left: 45%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 861px;
+            z-index: -1;
+
+            @include lg {
+                top: 20%;  
+                left: 50%;
+             }
+        }
+    }
+}
+
+.process-item {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+    background-size: 100% 100%;
+    padding: 60px;
+    width: 325px;
+    display: block;
+    margin: auto;
+    margin-bottom: -20px;
+
+    &_icon {
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+        background-color: $theme-color;
+        clip-path: path("M39 1.88675C42.094 0.100423 45.906 0.100423 49 1.88675L82.3013 21.1132C85.3953 22.8996 87.3013 26.2008 87.3013 29.7735V68.2265C87.3013 71.7992 85.3953 75.1004 82.3013 76.8867L49 96.1133C45.906 97.8996 42.094 97.8996 39 96.1133L5.69873 76.8867C2.60472 75.1004 0.69873 71.7992 0.69873 68.2265V29.7735C0.69873 26.2008 2.60472 22.8996 5.69873 21.1132L39 1.88675Z");
+        display: block;
+        margin: -60px auto 10px auto; 
+
+        img {
+            padding-right: 10px;
+        }
+    }
+
+    &_title {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 30px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    &_text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        margin-bottom: 35px;
+    }
+
+    &_num {
+        font-family: $title-font;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 34px;
+        width: 56px;
+        height: 56px;
+        line-height: 56px;
+        border-radius: 50%;
+        background-color: $title-color;
+        color: $theme-color;
+        display: block;
+        margin: auto;
+        margin-bottom: -40px;
+    }
+}
+
+/* -------------------------- Process End ---------------------------------- */

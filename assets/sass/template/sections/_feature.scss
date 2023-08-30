@@ -1,0 +1,184 @@
+/* Feature 1 ---------------------------------- */
+.shape-icon {
+    @include equal-size(136px);
+    line-height: 153px;
+    margin: 0 auto 40px auto;
+    transition: 0.4s ease-in-out;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+
+    .shape {
+        height: 100%;
+        width: 100%;
+        background-color: $theme-color;
+        position: absolute;
+        top: 0;
+        left: 0;
+        mask-repeat: no-repeat;
+        z-index: -1;
+    }
+
+    i {
+        font-size: 48px;
+        color: $title-color;
+        transition: 0.4s ease-in-out;
+    }
+}
+
+.feature-card {
+    background-color: $white-color;
+    padding: 60px;
+    position: relative;
+    text-align: center;
+    z-index: 2;
+
+    &:before {
+        content: "";
+        height: 100%;
+        width: 0;
+        background-color: $title-color;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        transition: 0.4s ease-in-out;
+    }
+
+    &_icon {
+        .shape {
+            background-color: $theme-color;
+        }
+    }
+
+    &_title {
+        font-size: 22px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        margin-top: -0.3em;
+        transition: 0.4s ease-in-out;
+    }
+
+    &_text {
+        margin-bottom: -0.5em;
+    }
+
+    &.active {
+        &:before {
+            width: 100%;
+        }
+
+        .feature-card {
+            &_title {
+                color: $white-color;
+            }
+
+            &_icon {
+                i {
+                    transform: rotateY(180deg);
+                }
+            }
+        }
+    }
+}
+
+@include lg {
+    .feature-card {
+        padding: 60px 25px;
+    }
+}
+
+@include xs {
+    .feature-card {
+        padding: 50px 15px;
+
+        &_title {
+            font-size: 20px;
+        }
+
+        &_text {
+            max-width: 265px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+/* Feature 2 / Skill ---------------------------------- */
+.skill-feature {
+    margin-bottom: 45px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &.style2 {
+        margin-top: 40px;
+        margin-bottom: 0px;    
+        .progress {
+            background-color: #E7E7E7;
+
+            &:after {
+                display: none;
+            }
+        }
+
+        .progress-bar {
+            height: 4px;
+            margin: 2px;
+            border-radius: 4px;
+            overflow: visible;
+        }
+
+        .skill-feature {
+            &_title {
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 28px;
+                text-transform: capitalize;
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    &_title,
+    .progress-value {
+        margin-top: -0.36em;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+
+    .progress {
+        position: relative;
+        height: 8px;
+        background-color: transparent;
+        overflow: visible;
+
+        &:after {
+            content: "";
+            height: 2px;
+            width: 100%;
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            background-color: #F1F1F1;
+        }
+    }
+
+    .progress-bar {
+        background-color: $theme-color;
+    }
+
+    .progress-value {
+        font-family: $title-font;
+        color: $title-color;
+        font-weight: bold;
+        margin-bottom: 0;
+        position: absolute;
+        top: -34px;
+        right: 0;
+    }
+}

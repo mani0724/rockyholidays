@@ -1,0 +1,82 @@
+/* Download ---------------------------------- */
+.download-btn {
+    &-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    background-color: $theme-color;
+    border: 1px solid $theme-color;
+    padding: 15px 40px;
+    display: inline-flex;
+    gap: 12px;
+    align-items: center;
+    color: $title-color;
+    border-radius: 999px;
+    i {
+        font-size: 35px;
+    }
+    .small-text {
+        font-size: 14px;
+        line-height: 1;
+        display: block;
+        margin-bottom: 5px;
+    }
+    .big-text {
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 0;
+        line-height: 1;
+        color: inherit;
+    }
+    &:hover {
+        background-color: $white-color;
+        border: 1px solid $theme-color; 
+    }
+}
+.app-mockup {
+    position: absolute;
+    bottom: 0;
+    right: 18%;
+    z-index: -1;
+    img {
+       max-width: fit-content; 
+    }
+}
+
+@include xl {
+    .app-mockup {
+        right: 10%;
+    }
+}
+
+@include ml {
+    .app-mockup {
+        right: 2%;
+        max-width: 43%;
+        img {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+}
+
+@include lg {
+    .app-mockup {
+        max-width: 38%;
+    }
+}
+
+@include md {
+    .app-mockup {
+        position: relative;
+        max-width: 420px;
+        margin: 40px auto -80px auto;
+        right: 0;
+    }
+    .download-btn {
+        &-wrap {
+            justify-content: center;
+        }
+    }
+}

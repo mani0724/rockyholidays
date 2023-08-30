@@ -1,0 +1,22 @@
+.position-relative {
+    z-index: 1;
+}
+.body-shape1 {
+    position: absolute;
+    left: 0;
+    bottom: $space;
+    z-index: -1;
+}
+
+@include xl {
+    .body-shape1 {
+        bottom: 30%;
+    }
+}
+
+@include ml {
+    .body-shape1 {
+        bottom: 0;
+        max-width: 220px;
+    }
+}

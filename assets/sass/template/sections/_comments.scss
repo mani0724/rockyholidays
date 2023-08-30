@@ -1,0 +1,334 @@
+.th-comment-form {
+    margin-top: var(--blog-space-y, 40px);
+    margin-bottom: 30px;
+    padding: var(--blog-space-y, 40px) var(--blog-space-x, 40px);
+    position: relative;
+    overflow: hidden;
+
+
+    .row {
+        --bs-gutter-x: 20px;
+        margin-top: 40px;
+
+        .form-group {
+            margin-top: 0;
+            margin-bottom: 24px;
+        }
+    }
+
+    .blog-inner-title {
+        margin-bottom: 0px;
+    }
+
+    .form-title {
+        margin-top: -0.35em;
+
+        a#cancel-comment-reply-link {
+            font-size: 0.7em;
+            text-decoration: underline;
+        }
+    }
+
+    .form-text {
+        margin-bottom: 25px;
+    }
+}
+
+.blog-comment-area {
+    margin-bottom: 25px;
+}
+
+.th-comment-form,
+.th-comments-wrap {
+    padding: 40px;
+    box-shadow: 0px 6px 30px rgba(7, 36, 95, 0.07);
+
+    select,
+    .form-control,
+    .form-select,
+    textarea,
+    input {
+        height: 55px;
+        padding: 0 25px 0 25px;
+        padding-right: 45px;
+        border: 1px solid transparent; 
+        color: var(--body-color);
+        background-color: #F7F7F7;
+        border-radius: 9999px;
+        border-radius: 0;
+        font-size: 16px;
+        width: 100%;
+    }
+    textarea{
+        padding: 15px 25px 0 25px !important;  
+    }
+}
+
+.th-comments-wrap {
+    margin-top: var(--blog-space-y, 40px);
+    margin-bottom: 30px;
+    overflow: hidden;
+
+    .description p:last-child {
+        margin-bottom: -0.5em;
+    }
+
+    .comment-respond {
+        margin: 30px 0;
+    }
+
+    pre {
+        background: #ededed;
+        color: #666;
+        font-size: 14px;
+        margin: 20px 0;
+        overflow: auto;
+        padding: 20px;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
+
+    li {
+        margin: 0;
+    }
+
+    .th-post-comment {
+        padding: 0;
+        position: relative;
+        display: flex;
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+        position: relative;
+        border-bottom: 1px solid $border-color;
+        background-color: #F7F7F7;
+        padding: 30px;
+        @include xs {
+            padding: 20px;  
+        }
+
+        ol,
+        ul,
+        dl {
+            margin-bottom: 1rem;
+        }
+
+        ol ol,
+        ol ul,
+        ul ol,
+        ul ul {
+            margin-bottom: 0;
+        }
+    }
+
+    ul.comment-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        margin-top: 40px;
+
+        ul,
+        ol {
+
+            ul,
+            ol {
+                margin-bottom: 0;
+            }
+        }
+        .th-comment-item{
+            margin-bottom: 30px;
+        }
+    }
+
+    .comment-avater {
+        @include equal-size(80px);
+        margin-right: 20px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .comment-content {
+        flex: 1;
+        margin-top: -6px;
+        position: relative;
+    }
+
+    .commented-on {
+        font-size: 14px;
+        display: inline-block;
+        margin-bottom: 8px;
+        font-weight: 400;
+        color: $body-color;
+        margin-left: auto;
+
+        i {
+            color: $theme-color;
+            margin-right: 7px;
+            font-size: 0.9rem;
+        }
+    }
+
+    .name {
+        margin-bottom: 2px;
+        font-size: 20px;
+
+        @include vxs {
+            margin-bottom: 0px;
+            font-size: 14px;
+        }
+    }
+
+    .comment-top {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .text {
+        margin-bottom: -0.46em;
+        @include xs {
+            margin-bottom: 10px;
+        }
+    }
+
+    .children {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        margin-left: 80px;
+    }
+
+    .reply_and_edit {
+        color: $theme-color;
+        position: absolute;
+        top: 0px;
+        right: 30px;
+        @include xs {
+            position: relative; 
+            padding-left: 30px;
+            margin-bottom: -0.2em;   
+        }
+
+        a {
+            color: $theme-color;
+            margin-right: 10px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .reply-btn {
+        font-weight: 600;
+        font-size: 16px;
+        color: $title-color;
+        display: inline-block;
+
+        i {
+            margin-right: 7px;
+        }
+
+        &:hover {
+            color: $theme-color;
+        }
+    }
+
+    .star-rating {
+        font-size: 12px;
+        margin-bottom: 10px;
+        position: absolute;
+        top: 5px;
+        right: 0;
+        width: 90px; 
+    }
+}
+
+ul.comment-list {
+    .th-comment-item:last-child:not(.children .th-comment-item) {
+        >.th-post-comment {
+            border-bottom: none; 
+        }
+    }
+
+    .th-comment-item:first-child:not(.children .th-comment-item) {
+        >.th-post-comment {
+            padding-bottom: 30px;
+            border-bottom: 1px solid $border-color;
+        }
+    }
+}
+
+.th-comments-wrap.th-comment-form {
+    margin: 0;
+}
+
+@include ml {
+
+    .th-comment-form,
+    .th-comments-wrap {
+        padding: 40px 20px;
+    }
+}
+
+@include lg {
+    .th-comments-wrap {
+        .children {
+            margin-left: 40px;
+        }
+    }
+}
+
+@include md {
+
+    .th-comment-form,
+    .th-comments-wrap {
+        padding: 40px;
+    }
+}
+
+@include sm {
+
+    .th-comment-form,
+    .th-comments-wrap {
+        padding: 40px 20px;
+    }
+
+    .th-comments-wrap {
+        .th-post-comment {
+            display: block;
+        }
+
+        .star-rating {
+            position: relative;
+            top: 0;
+            right: 0;
+        }
+
+        .comment-top {
+            display: block;
+        }
+
+        .comment-avater {
+            margin-right: 0;
+            margin-bottom: 25px;
+        }
+
+        .children {
+            margin-left: 40px;
+        }
+    }
+
+    .th-comments-wrap {
+        .children {
+            margin-left: 30px;
+        }
+    }
+}
+
+@include sm {
+    .th-comment-form {
+        --blog-space-x: 20px;
+    }
+}

@@ -1,0 +1,458 @@
+/* -------------------------- Header 7  Start ---------------------------------- */
+.header-layout7 {
+    .header-top {
+        position: relative;
+        background-color: $title-color;
+        padding: 10px 0;
+
+        @media(max-width: 1499px) {
+            padding: 7px 0;
+        }
+
+        @include xs {
+            display: none;
+        }
+    }
+
+    .header-logo {
+        margin-top: 0px;
+
+        @media(min-width: 1922px) {
+            margin-left: -50px;
+        }
+
+        @include md {
+            margin-top: -20px;
+        }
+
+        @include sm {
+            margin-top: 6px; 
+        }
+    }
+
+    .header-links {
+        position: relative;
+        margin-left: 380px;
+        z-index: 2;
+
+        @media(min-width: 1922px) {
+            margin-left: 280px;
+        }
+
+        @media(max-width: 1399px) {
+            margin-left: 310px;
+        }
+
+        @media(max-width: 1399px) {
+            margin-left: 250px;
+        }
+
+        @media(max-width: 1299px) {
+            margin-left: 210px;
+        }
+
+        @include lg {
+            display: none;
+        }
+
+        ul {
+            li {
+                padding: 0;
+                margin-right: 30px;
+
+                &:before {
+                    background-color: transparent;
+                }
+
+                i {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    color: $theme-color;
+                    padding: 12px;
+                    text-align: center;
+                    margin-right: 10px;
+                    background: rgba(255, 255, 255, 0.1);
+                    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.03);
+                    transition: all 0.4s ease-in-out;
+
+                    &:hover {
+                        background-color: $theme-color;
+                        color: $white-color;
+                    }
+                }
+
+                a {
+                    color: $white-color;
+
+                    &:hover {
+                        color: $theme-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .header-right {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .sticky-wrapper {
+        background-color: transparent;
+        position: relative;
+        z-index: 3;
+
+        &.sticky {
+            background-color: $title-color;
+
+            @include md {
+                padding: 15px 0;
+            }
+        }
+    }
+
+    .langauge {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+
+        @include md {
+            display: none;
+        }
+
+        &.lang-dropdown {
+            position: relative;
+
+            .dropdown-toggle {
+                font-family: var(--body-font);
+                background: none;
+                border: none;
+                width: 100%;
+                color: var(--white-color);
+                font-weight: 400;
+                font-size: 16px;
+                height: 26px;
+                line-height: 24px;
+                padding: 0;
+                border-radius: 0;
+                border-right: 1px solid rgba(255, 255, 255, 0.3);
+                padding-right: 35px;
+                margin-right: 30px;
+            }
+
+            .dropdown-menu {
+                position: absolute;
+                right: 0;
+                border-bottom: 2px solid var(--theme-color);
+                border-radius: 0;
+            }
+
+            .gtranslate_wrapper {
+                a {
+                    display: block;
+                    font-weight: 400;
+                    font-size: 16px;
+                    color: $title-color;
+                    font-family: $title-font;
+                    padding: 5px 10px;
+                    transition: all 0.4s ease-in-out;
+
+                    &:hover {
+                        background-color: $theme-color;
+                        color: $white-color;
+                    }
+                }
+            }
+        }
+
+        .nice-select {
+            font-family: $body-font;
+            background: none;
+            border: none;
+            width: 100%;
+            color: $white-color;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+            border-radius: 0;
+            padding: 0;
+            padding-right: 35px;
+            margin-right: 20px;
+            border-right: 1px solid #74757B;
+            height: 26px;
+
+            .list {
+                left: -20px;
+            }
+
+            &:after {
+                content: "\f107";
+                right: 20px;
+                top: -14px;
+                font-size: 16px;
+                transform: rotate(0deg);
+                border-bottom: none;
+                border-right: none;
+            }
+
+            &.open {
+                @extend :active;
+
+                &:after {
+                    transform: rotate(0deg);
+                }
+
+                .list {
+                    left: -20px;
+                    opacity: 1;
+                    pointer-events: auto;
+                    transform: scale(1) translateY(0);
+                }
+            }
+
+            .option {
+                color: $title-color;
+                min-height: 30px;
+
+                &.selected {
+                    color: $theme-color !important;
+                    background: $theme-color !important;
+
+                    &.focus {
+                        color: #fff !important;
+                        background: $theme-color !important;
+                    }
+                }
+
+                &:hover,
+                &.focus {
+                    background: $theme-color !important;
+                    color: #fff !important;
+                }
+            }
+        }
+    }
+
+    .header-social {
+        @include sm {
+            display: none;
+        }
+
+        a {
+            font-size: 14px;
+            display: inline-block;
+            color: $white-color;
+            margin: 0 0px 0 16px;
+            transition: all 0.4s;
+
+            &:hover {
+                color: $theme-color;
+            }
+        }
+
+        .social-title {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+            color: $white-color;
+            display: inline-block;
+            margin: 0 0px 0 0;
+        }
+    }
+
+    .logo-shape {
+        position: absolute;
+        top: 0%;
+        left: 0;
+        width: 28%;
+        height: 140px;
+        overflow: hidden;
+
+        @media(min-width: 2399px) {
+            width: 30%;
+        }
+
+        @media(max-width: 1799px) {
+            width: 35%;
+        }
+
+        @media(max-width: 1599px) {
+            width: 36%;
+        }
+
+        @media(max-width: 1499px) {
+            width: 35%;
+        }
+
+        @media(max-width: 1440px) {
+            width: 35%;
+        }
+
+        @media(max-width: 1399px) {
+            width: 36.5%;
+        }
+
+        @media(max-width: 1356px) {
+            width: 37.5%;
+        }
+
+        @media(max-width: 1299px) {
+            width: 42%;
+        }
+
+        @include lg {
+            width: 39%;
+        }
+
+        @media(max-width: 1024px) {
+            width: 45%;
+        }
+
+        @include md {
+            width: 48%;
+        }
+
+        @include sm {
+            width: 60%;
+        }
+
+        @include xs {
+            width: 65%;
+            height: 100%;
+        }
+
+
+        img {
+            width: 100%;
+
+            @media(max-width: 1799px) {
+                width: 90%;
+            }
+
+            @media(max-width: 1699px) {
+                width: 95%;
+            }
+
+            @media(max-width: 1599px) {
+                width: 100%;
+            }
+
+            @include xs {
+                height: 100%;
+            }
+
+            @include vxs {
+                transform: scale(1.5);
+            }
+        }
+    }
+
+    .main-menu {
+        padding-left: 60px;
+
+        @media(max-width: 1899px) {
+            padding-left: 70px;
+        }
+
+        @media(max-width: 1799px) {
+            padding-left: 90px;
+        }
+
+        @media(max-width: 1699px) {
+            padding-left: 130px;
+        }
+
+        @media(max-width: 1399px) {
+            padding-left: 70px;
+        }
+
+        @include lg {
+            padding-left: 0;
+        }
+    }
+
+    .menu-area {
+        position: relative;
+        z-index: 2;
+        background-color: transparent;
+
+        &:before {
+            content: "";
+            position: absolute;
+            right: 0;
+            width: 78%;
+            height: 80px;
+            background-color: #F7F4ED;
+            border-radius: 50px 0px 0px 50px;
+            z-index: -1;
+
+            @media(min-width: 2499px) {
+                width: 73%;
+            }
+
+            @media(max-width: 2499px) {
+                width: 74%;
+            }
+
+            @media(max-width: 2399px) {
+                width: 76%;
+            }
+
+            @media(max-width: 2199px) {
+                width: 78%;
+            }
+
+            @media(max-width: 1999px) {
+                width: 80%;
+            }
+
+            @media(max-width: 1922px) {
+                width: 78%;
+            }
+
+            @media(max-width: 1399px) {
+                width: 77%;
+            }
+
+            @include lg {
+                width: 65%;
+            }
+
+            @include sm {
+                width: 57%;
+            }
+
+            @include xs {
+                display: none;
+            }
+        }
+    }
+
+    .th-menu-toggle {
+        position: absolute;
+        right: 20px;
+        top: 15px;
+
+        @include xs {  
+            top: 22px;
+        }
+    }
+}
+
+@media (min-width: 1400px) {
+    .header-layout7 {
+        --main-container: 1524px;
+
+    }
+}
+
+@media (max-width: 1299px) {
+    .header-layout7 {
+        --main-container: 100%;
+
+    }
+}
+
+/* -------------------------- Header 7  Start ---------------------------------- */

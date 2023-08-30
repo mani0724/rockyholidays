@@ -1,0 +1,98 @@
+.checklist {
+    ul {
+        padding-left: 0;
+        list-style: none;
+        text-align: left;
+        margin-bottom: 0;
+    }
+    li {
+        color: $body-color;
+        margin-bottom: 10px;
+        font-weight: 400;
+        position: relative;
+        padding-left: 28px;
+        &:before {
+            content: "\f058";
+            font-family: $icon-font;
+            font-weight: 500;
+            color: $theme-color;
+            position: absolute;
+            left: 0;
+            transition: 0.3s ease-in-out;
+        }
+        // &:first-child {
+        //     margin-top: -0.5em;
+        // }
+        // &:last-child {
+        //     margin-bottom: -0.5em;
+        // }
+    }
+}
+
+.call-btn {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    &_icon {
+        color: $title-color;
+        font-size: 24px;
+        @include equal-size-lineHeight(60px);
+        background-color: $theme-color;
+        color: $white-color;
+        text-align: center;
+        border-radius: 50%;
+    }
+    &_label {
+        font-size: 14px;
+        font-family: $title-font;
+        text-transform: uppercase;
+        color: $white-color;
+        display: block;
+        margin-top: -4px;
+    }
+    &_link {
+        color: $white-color;
+        font-family: $title-font;
+        font-size: 24px;
+        font-weight: 600;
+        a {
+        color: inherit;
+            &:hover {
+                color: $theme-color;
+            }
+        }
+        @include sm {
+            font-size: 20px;
+        }
+    }
+}
+
+.call-big {
+    font-size: 60px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 32px;
+    line-height: 1;
+    &:hover {
+        color: $white-color;
+    }
+}
+
+@include lg {
+    .call-big {
+        font-size: 52px;
+    }
+}
+
+@include sm {
+    .call-big {
+        font-size: 42px;
+        margin-bottom: 22px;
+    }
+}
+
+@include xs {
+    .call-big {
+        font-size: 28px;
+    }
+}

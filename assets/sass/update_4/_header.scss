@@ -1,0 +1,345 @@
+/* -------------------------- Header 8  Start ---------------------------------- */
+
+.header-layout8 {
+    .header-top {
+        background-color: #202530;
+        --main-container: 1470px;
+        position: relative;
+        padding: 7px 0;
+        z-index: 4;
+
+        @include lg {
+            padding: 14px 0;
+        }
+
+        .header-social {
+            position: relative;
+            padding: 0 50px;  
+
+            .social-title {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 26px;
+                color: $title-color;
+                margin: 0;
+                @include vxs {
+                    display: none;  
+                }
+            }
+
+            a {
+                font-size: 14px;
+                display: inline-block;
+                color: $title-color;
+                margin: 0 0px 0 15px;
+                transition: all 0.4s ease-in-out;
+
+                &:hover {
+                    color: $white-color;
+                }
+            }
+
+            &:before,
+            &:after {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: -15px;
+                width: 379px;
+                height: 56px;
+                z-index: -1;
+            }
+
+            &:before {
+                width: 100%; 
+                clip-path: polygon(8% 0, 92% 0, 100% 100%, 0% 100%);
+                background-color: $theme-color;
+            }
+
+            &:after {
+                width: calc(100% + 42px);   
+                clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
+                background: #FFC000;
+                opacity: 0.4;
+                left: -20px;
+            }
+        }
+    }
+
+    .menu-area {
+        --main-container: 1470px;
+        padding: 0;
+        margin-left: 0;
+        position: relative;
+        z-index: 3;
+
+        @include md {  
+            padding: 14px 0;
+        }
+
+        .header-logo {
+            padding-bottom: 0;
+            padding-left: 20px;
+
+            @include xl {
+                max-height: 50px;
+                max-width: 180px;
+            }
+
+            @include md {
+                margin-top: 0;
+            }
+
+            @include sm {
+                margin-left: 0;
+                padding: 0; 
+            }
+        }
+    }
+
+    .main-menu {
+        padding-left: 130px;
+
+        @media(max-width: 1399px) {
+            padding-left: 90px;
+        }
+    }
+
+    .header-links {
+        @include lg {
+            display: none;
+        }
+
+        ul {
+            li {
+                padding: 0;
+                margin-right: 40px;
+
+                &:before {
+                    background-color: transparent;
+                }
+
+                i {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    color: $theme-color;
+                    padding: 12px;
+                    text-align: center;
+                    margin-right: 10px;
+                    background: rgba(255, 255, 255, 0.1);
+                    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.03);
+                    transition: all 0.4s ease-in-out;
+
+                    &:hover {
+                        background-color: $theme-color;
+                        color: $white-color;
+                    }
+                }
+
+                a {
+                    color: $white-color;
+
+                    &:hover {
+                        color: $theme-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .header-right {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        .langauge {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 10px;
+            border-left: 1px solid $body-color;
+            margin-left: 0px;
+            padding-left: 40px;
+
+            @include lg {
+                border-left: 1px solid transparent;
+                padding-left: 0;
+                margin-left: 0;
+            }
+            @include sm {
+                display: none;
+            }
+
+            i {
+                color: $white-color;
+            }
+            &.lang-dropdown {
+                position: relative;
+    
+                .dropdown-toggle {
+                    font-family: var(--body-font);
+                    background: none;
+                    border: none;
+                    width: 100%;
+                    color: var(--white-color);
+                    font-weight: 400;
+                    font-size: 16px;
+                    height: 26px;
+                    line-height: 24px;
+                    padding: 0;
+                    border-radius: 0;
+                    border-right: 1px solid rgba(255, 255, 255, 0.3);
+                    padding-right: 35px;
+                    margin-right: 30px;
+                }
+    
+                .dropdown-menu {
+                    position: absolute;
+                    right: 0;
+                    border-bottom: 2px solid var(--theme-color);
+                    border-radius: 0;
+                }
+    
+                .gtranslate_wrapper {
+                    a {
+                        display: block;
+                        font-weight: 400;
+                        font-size: 16px;
+                        color: $title-color;
+                        font-family: $title-font;
+                        padding: 5px 10px;
+                        transition: all 0.4s ease-in-out;
+    
+                        &:hover {
+                            background-color: $theme-color;
+                            color: $white-color;
+                        }
+                    }
+                }
+            }
+
+            .nice-select {
+                font-family: $body-font;
+                background: none;
+                border: none;
+                width: 100%;
+                color: $white-color;
+                font-weight: 400;
+                font-size: 14px;
+                height: 26px;
+                line-height: 26px;
+                padding: 0;
+                border-radius: 0;
+                padding-right: 20px; 
+
+                &:after {
+                    content: "\f107";
+                    right: 0px;
+                    top: -14px;
+                    border-bottom: none;
+                    border-right: none;
+                    font-size: 14px;
+                    transform: rotate(0deg);
+                }
+
+                &.open {
+                    @extend :active;
+
+                    &:after {
+                        transform: rotate(0deg);
+                    }
+
+                    .list {
+                        margin-top: 0;
+                        opacity: 1;
+                        pointer-events: auto;
+                        transform: scale(1) translateY(0);
+                    }
+                }
+
+                .option {
+                    color: $title-color;
+                    min-height: 30px;
+
+                    &.selected {
+                        color: $theme-color !important;
+                        background: $theme-color !important;
+
+                        &.focus {
+                            color: #fff !important;
+                            background: $theme-color !important;
+                        }
+                    }
+
+                    &:hover,
+                    &.focus {
+                        background: $theme-color !important;
+                        color: #fff !important;
+                    }
+                }
+            }
+        }
+
+
+    }
+
+    .header-button {
+        .icon-btn {
+            border: 1px solid #E7E7E7;
+        }
+
+        @media(max-width: 1399px) {
+            .th-btn {
+                display: none;
+            }
+        }
+    }
+
+    .sticky-wrapper {
+        max-width: 1470px;
+        margin: 0px auto 0 auto;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .logo-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 25%; 
+        height: 100%;
+        z-index: 0;
+
+        @media(max-width: 1356px) {
+            width: 29%;
+        }
+
+        @include lg {
+            width: 35%;
+        }
+        @include lg { 
+            width: 40%;  
+        }
+
+
+        &:before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-color: $smoke-color;
+            clip-path: polygon(0 0, 100% 0, calc(100% - 48px) 100%, 0% 100%);
+            z-index: -1;
+            border-radius: 0 0 10px 10px;
+        }
+    }
+
+}
+
+.header-absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* -------------------------- Header 8 Start ---------------------------------- */

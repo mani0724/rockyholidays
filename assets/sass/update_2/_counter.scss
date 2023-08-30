@@ -1,0 +1,35 @@
+.counter-box {
+    &-area {
+        background-color: $title-color;
+        padding: 65px 20px;
+        .row {
+            --bs-gutter-x: 0;
+            --bs-gutter-y: 30px;
+        }
+    }
+    &-wrap {
+        &:not(:last-of-type) {
+            border-right: 1px solid rgba($color: #fff, $alpha: 0.3);
+        }
+    }
+    text-align: center;
+    &_number {
+        font-size: 30px;
+        color: $white-color;
+        margin-bottom: 0;
+    }
+    &_text {
+        color: $white-color;
+        margin-bottom: 0;
+    }
+}
+
+@include lg {
+    .counter-box {
+        &-wrap {
+            &:not(:last-of-type) {
+                border-right: none;
+            }
+        }
+    }
+}

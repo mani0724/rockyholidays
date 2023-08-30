@@ -1,0 +1,23 @@
+/* Tab Menu 3 ---------------------------------- */ 
+.tab-menu3 {
+    margin-bottom: 40px; 
+    justify-content: center; 
+    gap: 20px;
+    .th-btn {
+        background-color: $smoke-color;
+        color: $title-color;
+        &.active,
+        &:hover {
+            color: $title-color;
+        }
+        &:before {
+            background-color: $theme-color;
+        }
+    }
+}
+
+@include lg {
+    .tab-menu3 {
+        margin-bottom: 40px;
+    }
+}

@@ -1,0 +1,189 @@
+/* -------------------------- Taxi Start ---------------------------------- */
+.tab-menu4 {
+    &.style2 {
+        margin-top: -25px;
+
+        button {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 28px;
+            text-transform: capitalize;
+            margin-bottom: 0;
+        }
+    }
+
+    &.style3 {
+        button {
+            color: $title-color;
+            text-transform: capitalize;
+
+            &.active {
+                color: $theme-color;
+            }
+        }
+    }
+
+    .tab-content {
+        .slick-list {
+            overflow: visible;
+        }
+    }
+}
+
+.taxi-item {
+    --space: 20px;
+    position: relative;
+    background: $white-color;
+    padding: 0px 40px 40px 40px;
+    box-shadow: 0px 13px 25px rgba(0, 0, 0, 0.05);
+    z-index: 2;
+    margin-top: 40px;
+    transition: all 0.5s ease-in-out;
+
+    &.style2 {
+        filter: drop-shadow(0px 0px 9px rgba(0, 0, 0, 0.05)); 
+        box-shadow: none; 
+    }
+
+    @media(max-width: 1299px) {
+        --space: 4px;
+    }
+
+    @include lg {
+        --space: 50px;
+    }
+
+    @include md {
+        --space: 0px;
+    }
+
+    @include sm {
+        --space: 90px;
+    }
+
+    @media(max-width: 520px) {
+        --space: 60px;
+    }
+
+    @media(max-width: 480px) {
+        --space: 40px;
+    }
+
+    @media(max-width: 425px) {
+        --space: 30px;
+    }
+
+    @include vxs {
+        --space: 0px;
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: -53px;
+        left: var(--space);
+        background: $white-color;
+        width: calc(100% - var(--space) * 2);
+        height: 100px;
+        z-index: -1;
+        clip-path: path("M344 58.2774H0C53 14.2999 196 -47.2686 344 58.2774Z");
+
+        @media(max-width: 1299px) {
+            top: -40px;
+        }
+
+        @include lg {
+            top: -50px;
+        }
+
+        @include md {
+            top: -30px;
+        }
+
+        @include sm {
+            top: -50px;
+        }
+    }
+
+    &_img {
+        position: relative;
+        text-align: center;
+        margin-bottom: 20px;
+        max-height: 150px;
+    }
+
+    &_title {
+        font-family: $title-font;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 34px;
+        text-align: center;
+        color: $title-color;
+        margin-bottom: 5px;
+
+        &:hover {
+            color: $theme-color;
+        }
+
+        a {
+            color: inherit;
+        }
+    }
+
+    &_subtitle {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        text-align: center;
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #E7E7E7;
+    }
+
+    &_feature {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        color: #74757B;
+        margin-bottom: 20px;
+
+        img {
+            margin-right: 10px;
+        }
+    }
+
+    .th-btn {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    &:hover {
+        transform: translateY(-10px);
+    }
+}
+
+.taxi-area {
+    @include sm {
+        .container {
+            max-width: 100%;
+        }
+    }
+}
+
+.checklist {
+    &.style2 {
+        ul {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            @media(max-width: 450px) {
+                grid-template-columns: repeat(1, 1fr); 
+            }
+        }
+    }
+}
+
+/* -------------------------- Taxi End ---------------------------------- */

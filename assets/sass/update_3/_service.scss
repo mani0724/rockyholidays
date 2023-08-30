@@ -1,0 +1,165 @@
+/* -------------------------- Service Start ---------------------------------- */
+.service-item {
+    position: relative;
+    background-color: $title-color;
+    background-size: 100%, 100%;
+    background-position: bottom center;
+    padding: 30px;
+    text-align: center;
+    overflow: hidden;
+    z-index: 2;
+    transition: all 0.5s ease-in-out;
+
+    &.style2 {
+        box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.08);
+    }
+
+    &:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: $white-color;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: 0.4s ease-in-out;
+    }
+
+    &_img {
+        margin-bottom: 20px;
+    }
+
+    &_title {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 34px;
+        color: $title-color;
+        margin-bottom: 12px;
+
+        &:hover {
+            color: $theme-color;
+        }
+
+        a {
+            color: inherit;
+        }
+    }
+
+    &_text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        margin-bottom: 18px;
+    }
+
+    &:hover {
+
+        &:before {
+            height: 0;
+        }
+
+        .service-item {
+            &_title {
+                color: $white-color;
+            }
+
+            &_text {
+                color: #BDBDBD;
+            }
+        }
+
+        .line-btn {
+            color: $theme-color;
+
+            &:before {
+                background-color: $theme-color;
+            }
+        }
+    }
+}
+
+.service-single {
+    background: $white-color;
+    padding: 40px;
+    box-shadow: 0px 6px 40px 0px rgba(0, 0, 0, 0.08);
+
+    @include lg {
+        padding: 30px;
+    }
+}
+
+.service-feature {
+    border-top: 5px solid $theme-color;
+
+    &.style2 {
+        padding: 40px 50px;
+        display: block;
+        text-align: center;
+
+        @media(max-width: 1299px) {
+            padding: 30px;
+        }
+        @include lg {
+            padding: 25px;  
+        }
+
+        .service-feature {
+            &_icon {
+                margin-bottom: 18px;
+                min-height: 50px;
+            }
+        }
+    }
+}
+
+.service-process-wrap {
+    &.style2 {
+        .service-process {
+            position: relative;
+            background-color: transparent;
+            padding: 50px 16px;
+            border: 1px solid #EEEEEE;
+            border-radius: 200px;
+
+            @include lg {
+                padding: 70px 16px 50px 16px;  
+            }
+            @include md {
+                padding: 70px 20px 50px 20px;    
+            }
+            @include md {
+                padding: 50px 20px 40px 20px;      
+            }
+
+            &_num {
+                width: 46px;
+                height: 46px;
+                line-height: 46px;
+                font-weight: 600;
+                position: absolute;
+                top: -30px;
+                left: 0;
+            }
+
+            &_title {
+                font-size: 20px;
+                margin-bottom: 4px;
+            }
+
+            &_text {
+                line-height: 26px;
+            }
+        }
+    }
+}
+
+.ser-area {
+    .sec-btn {
+        @include lg {
+            text-align: center;
+        }
+    }
+}
+
+/* -------------------------- Service End ---------------------------------- */

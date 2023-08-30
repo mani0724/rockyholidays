@@ -1,0 +1,28 @@
+/* Brand 1 ---------------------------------- */
+.brand-slide {
+    --bs-gutter-x: 0 !important;
+    .slick-list {
+        border-right: 1px solid #ececec;
+    }
+}
+.brand-img {
+    text-align: center;
+    border: 1px solid #ececec;
+    border-right: none;    
+    min-height: 150px;
+    display: grid !important;
+    align-items: center;
+    justify-content: center;
+    img {
+        padding: 0 15px;
+        width: 170px;
+        max-width: 100%;
+        filter: grayscale(100%) invert(0.6);
+    }
+}
+
+@include xs {
+    .brand-img {   
+        min-height: 120px;
+    }
+}

@@ -1,0 +1,92 @@
+/* ------------------------------- Feature Start ---------------------------------- */
+.feature-video {
+    position: relative;
+    width: 841px;
+    height: 653px;
+    margin-left: -70%;
+
+    @media(max-width: 1299px) {
+        width: 790px;
+        height: 615px;
+    }
+
+    @include lg {
+        width: 100%;
+        height: 100%;
+        margin-left: 0;
+        margin-bottom: 60px;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .play-btn {
+        position: absolute; 
+        top: 50%;
+        left: 40%;
+        transform: translate(50%, -50%);
+
+        @media(max-width: 1299px) {
+            left: 50%;
+        }
+        @include lg {
+            left: 40%;  
+        }
+        @media(max-width: 480px) {
+            left: 35%;  
+        }
+        @include vxs{
+            left: 30%; 
+        }
+
+        i {
+            width: var(--icon-size, 80px);
+            height: var(--icon-size, 80px);
+            line-height: var(--icon-size, 80px);
+            background-color: $white-color;
+            color: $theme-color;
+        }
+
+        &:after,
+        &:before {
+            background-color: $white-color;
+        }
+    }
+}
+
+
+
+.counter-wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    @include xs {
+        display: block;
+    }
+}
+
+.counter-card {
+    &.style2 {
+        @include xs {
+            margin-bottom: 50px;
+        }
+
+        .counter-card {
+            &_number {
+                font-family: $title-font;
+                font-weight: 700;
+                font-size: 44px;
+                line-height: 54px;
+                margin-bottom: 8px;
+            }
+
+            &_text {
+                color: $body-color;
+            }
+        }
+    }
+}
+
+/* ------------------------------- Feature End ---------------------------------- */

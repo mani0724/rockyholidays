@@ -1,0 +1,183 @@
+/* -------------------------- Booking Start ---------------------------------- */
+.booking-form4 {
+    position: relative;
+    background: transparent;
+    border-radius: 10px;
+    border: none;
+    padding: 80px 100px 120px 120px;
+    box-shadow: none;
+    z-index: 2;
+    background-size: 100% 100%;
+    margin-left: -25px;
+    min-width: 680px;
+    min-height: 581px;
+    margin-bottom: -40px;
+
+    @media(max-width: 1299px) {
+        padding: 50px 50px 50px 80px;   
+        min-width: 500px;
+        margin-left: 0;
+    }
+    @include lg {
+        padding: 50px 50px 50px 120px; 
+    }
+
+
+    @include lg {
+        margin-top: 40px;
+    }
+
+    @include md {
+        padding: 50px 50px 80px 80px;
+    }
+
+    @include xs {
+        min-width: 100%;
+        min-height: 100%;
+        background-image: none !important; 
+        background-color: $white-color;
+        box-shadow: 0px 6px 25px rgba(1, 19, 60, 0.09);   
+        padding: 30px; 
+        border-radius: 10px;
+
+    }
+
+    select,
+    .form-control,
+    .form-select,
+    textarea,
+    input {
+        height: 56px;
+        border: 1px solid #E7E7E7;
+        border-radius: 30px;
+    }
+}
+
+.booking-text {
+    max-width: 538px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    color: #BDBDBD;
+
+    @include lg {
+        display: block;
+        margin: auto;
+    }
+}
+
+.about-quote {
+    &.style2 {
+        background: #F7F7F7;
+        border-radius: 10px;
+        border: none;
+        padding: 47px;
+        margin-top: 40px;
+        margin-bottom: 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 30px;
+        min-width: 594px;
+        clip-path: polygon(0 0, 100% 0, 98% 100%, 0% 100%);
+
+        @media(max-width: 1299px) {
+            min-width: 450px;
+        }
+
+        @include lg {
+            padding: 25px;
+            margin-top: 0;
+            justify-content: center;
+        }
+
+        @include xs {
+            display: block;
+            min-width: 100%;
+        }
+
+        @include xs {
+            text-align: center;
+        }
+
+        .about-review-wrapp {
+            background: $white-color;
+            padding: 2px 30px;
+            border: 1px solid #E7E7E7;
+            border-radius: 10px;
+            min-width: 187px;
+
+            @include xs {
+                margin-bottom: 20px;
+            }
+        }
+
+        .about-review {
+            font-family: $title-font;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 34px;
+            color: $title-color;
+            border-bottom: 1px solid #E7E7E7;
+            display: block;
+            text-align: center;
+
+        }
+
+        .star {
+            text-align: center;
+
+            i {
+                color: $theme-color;
+                font-size: 12px;
+                margin-right: 2px;
+            }
+        }
+
+        .text {
+            font-family: $title-font;
+            color: $title-color;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 30px;
+            margin-bottom: 4px;
+        }
+
+        .rating {
+            font-family: $body-font;
+            color: $body-color;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+        }
+    }
+}
+
+.info-card {
+    &.style4 {
+        margin-bottom: 80px;
+
+        @include md {
+            margin-bottom: 40px;
+        }
+
+        .info-card {
+            &_icon {
+                i {
+                    color: $title-color;
+                    font-size: 24px;
+                }
+            }
+
+            &_text {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 26px;
+                color: $white-color;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+/* -------------------------- Booking Start ---------------------------------- */

@@ -1,0 +1,180 @@
+.service-list {
+    &-area {
+        padding: 40px;
+        border: 1px solid #F2F2F2;
+        box-shadow: 0px 13px 25px rgba(0, 0, 0, 0.05);
+        background-color: $white-color;
+    }
+    &-box {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        position: relative;
+        .service-img {
+            flex: 520px;
+        }
+        .content {
+            flex: 530px;
+        }
+        .text {
+            margin-bottom: 33px;
+        }
+        .icon-overlay {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: -1;
+            opacity: 0.6;
+        }
+    }
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: $title-color;
+    border: 1px solid #F2F2F2;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.05);
+    padding: 35px;
+    transition: 0.4s ease-in-out;
+    margin-bottom: 40px; 
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    &:before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-color: $white-color;
+        z-index: -1;
+        transition: 0.4s ease-in-out;
+        transform-origin: top;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: calc(50% - 17px);
+        border-style: solid;
+        border-width: 0 17px 0 17px;
+        border-color: $title-color transparent transparent transparent;
+        transition: 0.4s ease-in-out;
+    }
+    &_text {
+        display: block;
+        text-transform: uppercase;
+        margin-bottom: 6px; 
+        font-size: 14px;
+        line-height: 16px; 
+        color: $body-color; 
+        transition: 0.4s ease-in-out;
+    }
+    &_title {
+        font-size: 20px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: $title-color;
+        margin-bottom: 0;
+        transition: 0.4s ease-in-out;
+    }
+}
+
+.slick-current {
+    .service-list {
+        &::before {
+            transform: scaleY(0);
+        }
+        &:after {
+            border-width: 13px 17px 0 17px;
+        }
+        &_title {
+            color: $white-color;
+        }
+        &_text {
+            color: $light-color;
+        }
+    }
+}
+
+.service-info {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    border-bottom: 1px solid $border-color;
+    padding-bottom: 32px;
+    margin-bottom: 32px;
+    &_text {
+        display: block;
+        font-size: 14px;
+        margin-bottom: 6px;
+        text-transform: uppercase;
+    }
+    &_title {
+        font-size: 30px;
+        margin-bottom: 0;
+        text-transform: uppercase;
+    }
+}
+
+@include ml {
+    .service-list {
+        padding: 25px;
+    }
+}
+
+@include lg {
+    .service-list {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+}
+
+@include md {
+    .service-list {
+        &-box {
+            flex-direction: column;
+            align-items: stretch;
+            .service-img {
+                flex: 100%;
+                img {
+                    width: 100%;
+                }
+            }
+            .content {
+                flex: 100%;
+            }
+        }
+        gap: 0;
+        &_title {
+            display: none;
+        }
+        &_text {
+            display: none;
+        }
+    }
+}
+@include xs {
+    .service-list-area {
+        padding: 20px;
+    }
+    .service-list-box {
+        .text {
+            margin-bottom: 20px;
+        }
+    }
+    .service-info {
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        gap: 15px;
+        &_icon {
+            min-width: 50px;
+        }
+        &_title {
+            font-size: 20px;
+        }
+    }
+}
+@include vxs {
+    .service-list {
+        padding: 20px;
+    }
+}

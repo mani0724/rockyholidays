@@ -1,0 +1,160 @@
+/* -------------------------- Hero  Start ---------------------------------- */
+
+.hero-slider-7 {
+    .slick-dots {
+        position: absolute;
+        top: 50%;
+        left: 160px;
+        margin: 0;
+        transform: translateY(-50%);
+
+        @media(max-width: 1799px) {
+            left: 60px;
+        }
+
+        @media(max-width: 1499px) {
+            display: none !important;
+        }
+
+
+        &:before,
+        &:after {
+            content: '';
+            width: 4px;
+            height: 100px;
+            background-image: linear-gradient(180deg, #FFC000 0%, rgba(255, 192, 0, 0.522) 30.21%, rgba(255, 192, 0, 0.1807) 55.73%, rgba(255, 192, 0, 0) 90.1%);
+            position: absolute;
+            left: calc(50% - 1.5px);
+        }
+
+        &:before {
+            bottom: calc(100% + 5px);
+            transform: rotateX(180deg);
+        }
+
+        &:after {
+            top: calc(100% + 5px);
+        }
+
+        li {
+            display: block;
+            margin: 28px 0;
+
+            button {
+                width: 14px;
+                height: 14px;
+                border-radius: 0;
+
+                &:before {
+                    border-radius: 0;
+                }
+            }
+        }
+
+        .slick-active {
+            button {
+                background-color: $theme-color;
+            }
+        }
+    }
+}
+
+.hero-style7 {
+    position: relative;
+    padding: 158px 0 254px 0;
+    max-width: 638px;
+
+    @media(max-width: 1299px) {
+        padding: 110px 0 200px 0;
+    }
+
+    @include lg {
+        padding: 110px 0 200px 0;
+    }
+
+    @include md {
+        padding: 160px 0 200px 0;
+    }
+
+    @include xs {
+        padding: 100px 0 200px 0;
+    } 
+    @include vxs { 
+        padding: 90px 0 170px 0;  
+    } 
+
+    .hero-subtitle {
+        position: relative;
+        font-family: $title-font;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 30px;
+        text-transform: uppercase;
+        color: $theme-color;
+        display: block;
+        margin: -0.3rem 0 20px 60px;
+
+        @include xs {
+            font-size: 16px;
+            line-height: 28px;
+        }
+
+        @include vxs {
+            font-size: 14px;
+            line-height: 26px; 
+        }
+
+        &:before,
+        &:after {
+            position: absolute;
+            content: '';
+            background-color: $theme-color;
+            height: 2px;
+            top: 50%;
+            right: auto;
+            left: -10px;
+            transform: translate(-100%, 0);
+        }
+
+        &:after {
+            margin-top: -5px;
+            width: 30px;
+        }
+
+        &:before {
+            width: 50px;
+            margin-top: 3px;
+        }
+    }
+
+    .hero-title {
+        font-weight: 600;
+        font-size: 74px;
+        line-height: 84px;
+        color: $white-color;
+        margin-bottom: 15px;
+
+        @include md {
+            font-size: 54px;
+            line-height: 64px;
+        }
+
+        @include sm {
+            font-size: 44px;
+            line-height: 54px;
+        }
+        @include vxs {
+            font-size: 34px;
+            line-height: 44px; 
+        }
+    }
+
+    .hero-text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        margin-bottom: 40px;
+    }
+}
+
+/* -------------------------- Hero  End ---------------------------------- */
